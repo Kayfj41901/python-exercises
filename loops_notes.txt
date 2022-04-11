@@ -1,0 +1,95 @@
+A loop is the process of using an initialization, repetitions, and an ending condition.
+There are two types of loops in Python: 
+
+*Indefinite iteration, where the number of times the loop is executed depends on how 
+many times a condition is met. 
+*Definite iteration, where the number of times the loop will be executed is defined 
+in advance (usually based on the collection size)
+
+A for loop is a type of definite iteration. 
+#a way to perform an action on each index in a list 
+General Structure of a for loop:
+for <temporary variable> in <collection>:
+        <action>:
+
+BASIC EXAMPLE:
+board_games = ["Settlers of Catan", "Carcassone", "Power Grid", "Agricola", "Scrabble"]
+
+for game in board_games:
+     print(game)
+
+Output-only Terminal
+Output:
+Settlers of Catan
+Carcassone
+Power Grid
+Agricola
+Scrabble
+
+While Loop:
+#A while loop performs a set of instructions as long as a given condition is true. 
+
+General Structure of a while loop: 
+while <conditional statement>:
+        <action>
+
+BASIC EXAMPLE: 
+count = 0 
+while count <= 3:
+    print(count)
+    count += 1
+
+Output-only Terminal Output: 
+0 
+1
+2
+3
+
+While Loops to iterate through a list: 
+#Print every index in a list 
+BASIC EXAMPLE: 
+
+ingredients = ["milk", "sugar", "vanilla extract", "dough", "chocolate"]
+
+length = len(ingredients)
+index = 0 
+
+while index < length: 
+    print(ingredients[index])
+    index += 1
+
+Output-only Terminal Output:
+milk 
+sugar 
+vanilla extract 
+dough 
+chocolate
+
+Loop Control: Break 
+#search a list to see if a specific value exists 
+
+BASIC EXAMPLE:
+
+items_on_sale = ["blue shirt", "striped socks", "knit dress", "red headband", 
+"dinosaur onesie"] 
+
+for item in items_on_sale:
+    if item == "knit dress": 
+    break
+
+print("End of search!")
+
+Output-only Terminal Output:
+blue shirt 
+striped socks 
+knit dress
+End of search! 
+
+Loop Control: continue 
+#Print only the indicies that meet certain conditions 
+
+BASIC EXAMPLE:
+
+big_number_list = [1, 2, -1, 4, -5, 5, 2, -9]
+
+
