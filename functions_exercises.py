@@ -10,7 +10,7 @@ def is_two(betty):
         return True
     else:
         return False
-
+print(is_two(5))
 
 
 # In[27]:
@@ -22,7 +22,7 @@ def is_vowel(charlie):
         return True 
     else:
         return False
-
+print(is_vowel('f'))
 
 
 # In[66]:
@@ -33,7 +33,7 @@ def is_consonant2(abbba):
         return False
     else: 
         return True
-
+print(is_consonant2('m'))
 
 
 # In[29]:
@@ -46,7 +46,7 @@ def is_consonant(david):
         return True 
     else:
         return False
-
+print(is_consonant('a'))
 
 
 # In[33]:
@@ -56,7 +56,7 @@ def is_consonant(david):
 def cap(ella):
     if is_consonant(ella[0]):
         return ella.capitalize()
-
+print(cap("max"))
 
 
 # In[67]:
@@ -66,7 +66,7 @@ def cap(ella):
 def calculate_tip(tip_percentage, bill_total): 
     return bill_total * tip_percentage
 
-
+print(calculate_tip( .22, 100))
 
 
 # In[35]:
@@ -75,7 +75,7 @@ def calculate_tip(tip_percentage, bill_total):
 #6
 def apply_discount(original_price, discount_percentage):
     return original_price * (1 - discount_percentage)
-
+print(apply_discount(100, .38))
 
 
 # In[46]:
@@ -87,6 +87,7 @@ def handle_commas(foxtrot):
     return foxtrot
 
 
+print(handle_commas('1,000,000'))
 
 
 # In[52]:
@@ -105,6 +106,7 @@ def get_letter_grade(grade):
         return "D"
     else: 
         return "F"
+print(get_letter_grade(62))
 
 
 # In[53]:
@@ -115,7 +117,18 @@ def remove_vowels(x):
   for i in "aeiouAEIOU":
     x = x.replace(i,"")
   return x
+print(remove_vowels('Harrison'))
 
+
+# Define a function named normalize_name. It should accept a string and return a valid python identifier, that is:
+# anything that is not a valid python identifier should be removed
+# leading and trailing whitespace should be removed
+# everything should be lowercase
+# spaces should be replaced with underscores
+# for example:
+# Name will become name
+# First Name will become first_name
+# % Completed will become completed
 
 # In[55]:
 
@@ -125,6 +138,7 @@ bad_words = ["False", "None", "True", "and", "as", "assert", "async", "await", "
 #x[0] = not int or float
 # possibly x = x.str.replace([{bad_words}, "    ")
 ###can't only contain digits 
+#just need to change to lowercase and order the code properly 
 def normalize_name(x):
     x = x.replace({bad_words}, '    ')
     strip(x)
@@ -134,18 +148,29 @@ def normalize_name(x):
             x.replace(char, " ")
             return x
             
+print(normalize_name('%#&$%none KayBay'))
 
 
-# In[68]:
+# Write a function named cumulative_sum that accepts a list of numbers and returns a list that is the cumulative sum of the numbers in the list.
+
+# In[2]:
 
 
 #11
-def cumulative_sum(ada):
+def cumulative_sum(r):
     total = 0 
     result = []
-    for i in ada:
-        total += ada
+    for i in r:
+        total += i
         result.append(total)
     return result 
+
+cumulative_sum(10)
+#giving error message 'int' object is not iterable 
+
+
+# In[ ]:
+
+
 
 
